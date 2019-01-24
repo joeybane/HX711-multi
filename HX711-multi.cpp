@@ -165,6 +165,10 @@ void HX711MULTI::readRaw(long *result) {
     }
 }
 
+long HX711MULTI::get_offset(byte i) {
+	return OFFSETS[i];
+}
+
 void HX711MULTI::setDebugEnable(bool debugEnable) {
 	debugEnabled = debugEnable;
 }

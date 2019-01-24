@@ -46,13 +46,16 @@ class HX711MULTI
 		void read(long *result = NULL);
 
 		// same as read, but does not offset the values according to the tare
-		void HX711MULTI::readRaw(long *result = NULL);
+		void readRaw(long *result = NULL);
 
 		// set the OFFSET value for tare weight
 		// times: how many times to read the tare value
 		// returns true iff the offsets have been reset for the scale during this call.
 		// tolerance: the maximum deviation of samples, above which to reject the attempt to tare. (if set to 0, ignored)
 		bool tare(byte times = 10, uint16_t tolerance = 0);
+		
+		// returns the tare offset
+		long get_offset(byte i);
 
 		// puts the chip into power down mode
 		void power_down();
