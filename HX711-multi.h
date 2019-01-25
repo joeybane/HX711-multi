@@ -55,6 +55,7 @@ class HX711MULTI
 		bool tare(byte times = 10, uint16_t tolerance = 0);
 		
 		// returns the tare offset
+		void get_offset(long *result = NULL);
 		long get_offset(byte i);
 
 		// puts the chip into power down mode
