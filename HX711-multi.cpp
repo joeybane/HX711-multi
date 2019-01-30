@@ -165,10 +165,6 @@ void HX711MULTI::readRaw(long *result) {
     }
 }
 
-void HX711MULTI::get_offset(long *result) {
-	result = OFFSETS;
-}
-
 long HX711MULTI::get_offset(byte i) {
 	return OFFSETS[i];
 }
